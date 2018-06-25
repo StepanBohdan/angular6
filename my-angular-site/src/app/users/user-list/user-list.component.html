@@ -1,0 +1,17 @@
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline" *ngIf="users">
+      <div class="column is-4" *ngFor="let user of users | async">
+        <div class="card">
+          <a class="card-link" routerLink="/users/{{ user.login }}">
+            <p class="card-content">
+              {{ user.login }}
+            </p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
